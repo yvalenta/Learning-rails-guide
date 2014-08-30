@@ -4,4 +4,4 @@
 
 $(document).on 'page:change', ->
   $('#departamento').change ->
-    alert $(this).val()
+    alert $(@).val()
