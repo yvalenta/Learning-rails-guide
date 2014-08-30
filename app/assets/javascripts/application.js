@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+//$(document).on 'page:change', ->
+//  $('#departamento').change ->
+//    alert $(@).val()
+
+
+//$(document).on('page:change', function(){
+//   $('#departamento').change(function(){
+//     alert('oeoeo')
+//   })
+//});
