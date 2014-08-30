@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  cod_dane: MyString
+  departamento_id: 
+
+two:
+  nombre: MyString
+  cod_dane: MyString
+  departamento_id: 

@@ -1,0 +1,31 @@
+<h1>Listing ciudades</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Cod dane</th>
+      <th>Departamento</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ciudades.each do |ciudad| %>
+      <tr>
+        <td><%= ciudad.nombre %></td>
+        <td><%= ciudad.cod_dane %></td>
+        <td><%= ciudad.departamento.nombre %></td>
+        <td><%= link_to 'Show', ciudad %></td>
+        <td><%= link_to 'Edit', edit_ciudad_path(ciudad) %></td>
+        <td><%= link_to 'Destroy', ciudad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ciudad', new_ciudad_path %>

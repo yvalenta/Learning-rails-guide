@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VisionamosMiniCoffe</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= link_to 'Empresa', empresas_path %>
+<%= link_to 'Ciudades', ciudades_path %>
+<%= link_to 'Departamentos', departamentos_path %>
+<%= link_to 'Clientes', clientes_path %>
+
+<%= yield %>
+
+</body>
+</html>
