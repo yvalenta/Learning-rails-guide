@@ -4,5 +4,5 @@
 
 $(document).on 'page:change', ->
   $('#empresa_departamento_id').change ->
-    buscar_ciudad($(@))
-  buscar_ciudad($('#empresa_departamento_id'))
+    $('.buscar-ciudad').buscar_ciudad()
+  $('.buscar-ciudad').buscar_ciudad()
