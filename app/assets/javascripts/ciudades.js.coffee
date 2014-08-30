@@ -3,4 +3,5 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).on 'page:change', ->
-  alert("Hello World")
+  $('#departamento').change ->
+    alert $(this).val()
