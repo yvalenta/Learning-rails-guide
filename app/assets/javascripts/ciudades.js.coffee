@@ -6,7 +6,8 @@ $(document).on 'page:change', ->
   $('#departamento').change ->
     departamento = $(@).val()
     target = $('#cliente_ciudad_id')
-    console.log target.find('option')
+    target.find('option').remove()
     $.getJSON "/ciudades/search/#{departamento}.json", (data) ->
       for ciudad in data
+        target.append("<option value='#{ciudad.id}'>#{ciudad.nombre}</option>")
         console.log "#{ciudad.nombre}: #{ciudad.id}"
