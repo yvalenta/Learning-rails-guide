@@ -16,9 +16,10 @@
     <%= f.text_field :nombre %>
   </div>
   <div class="field">
-    <%= label_tag :departamento %><br>
-    <%= select_tag :departamento, options_from_collection_for_select(Departamento.all,
-                                                                    :id, :nombre) %>
+    <%= f.label :departamento_id %><br>
+    <%= f.select :departamento_id, options_from_collection_for_select(Departamento.all,
+                                                                    :id, :nombre,
+                                                                    @cliente.departamento_id ) %>
   </div>
 
   <div class="field">

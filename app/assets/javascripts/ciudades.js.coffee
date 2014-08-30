@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).on 'page:change', ->
-  $('#departamento').change ->
+  $('#cliente_departamento_id').change ->
     departamento = $(@).val()
     target = $('#cliente_ciudad_id')
     target.find('option').remove()
