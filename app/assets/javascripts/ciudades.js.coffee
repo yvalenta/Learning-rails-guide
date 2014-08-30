@@ -4,5 +4,6 @@
 
 $(document).on 'page:change', ->
   $('#departamento').change ->
-    $.getJSON '/ciudades/search/1.json', (data) ->
+    departamento = $(@).val()
+    $.getJSON "/ciudades/search/#{departamento}.json", (data) ->
       console.log data
