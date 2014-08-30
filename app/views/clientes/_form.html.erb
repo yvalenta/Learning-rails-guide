@@ -19,7 +19,10 @@
     <%= f.label :departamento_id %><br>
     <%= f.select :departamento_id, options_from_collection_for_select(Departamento.all,
                                                                     :id, :nombre,
-                                                                    @cliente.departamento_id ) %>
+                                                                    @cliente.departamento_id),
+                                    {prompt: 'Seleccione una opcion'},
+                                    {'data-target' => '#cliente_ciudad_id'}
+    %>
   </div>
 
   <div class="field">

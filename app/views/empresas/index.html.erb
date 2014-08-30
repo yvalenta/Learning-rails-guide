@@ -5,6 +5,7 @@
     <tr>
       <th>Nombre</th>
       <th>Ciudad</th>
+      <th>Departamento</th>
       <th></th>
       <th></th>
       <th></th>
@@ -16,6 +17,7 @@
       <tr>
         <td><%= empresa.nombre %></td>
         <td><%= empresa.ciudad.nombre %></td>
+        <td><%= empresa.departamento.try(:nombre) %></td>
         <td><%= link_to 'Show', empresa %></td>
         <td><%= link_to 'Edit', edit_empresa_path(empresa) %></td>
         <td><%= link_to 'Destroy', empresa, method: :delete, data: { confirm: 'Are you sure?' } %></td>

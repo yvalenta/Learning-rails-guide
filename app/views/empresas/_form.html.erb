@@ -15,12 +15,24 @@
     <%= f.label :nombre %><br>
     <%= f.text_field :nombre %>
   </div>
+
+  <div class="field">
+    <%= f.label :departamento_id %><br>
+    <%= f.select :departamento_id, options_from_collection_for_select(Departamento.all,
+                                                                      :id, :nombre,
+                                                                      @empresa.departamento_id),
+                                     {prompt: 'Seleccione una opcion'},
+                                     {'data-target' => '#empresa_ciudad_id'}
+    %>
+  </div>
+
   <div class="field">
     <%= f.label :ciudad_id %><br>
     <%= f.select :ciudad_id, options_from_collection_for_select(Ciudad.all,
-                                                                :id, :nombre,
-                                                                @empresa.ciudad_id) %>
+                                                                  :id, :nombre,
+                                                                  @empresa.ciudad_id) %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

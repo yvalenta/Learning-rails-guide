@@ -7,7 +7,12 @@
 
 <p>
   <strong>Ciudad:</strong>
-  <%= @empresa.ciudad %>
+  <%= @empresa.ciudad.nombre %>
+</p>
+
+<p>
+  <strong>Departamento:</strong>
+  <%= @empresa.departamento.nombre %>
 </p>
 
 <%= link_to 'Edit', edit_empresa_path(@empresa) %> |
