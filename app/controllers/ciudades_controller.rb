@@ -12,6 +12,15 @@ class CiudadesController < ApplicationController
   def show
   end
 
+  def search
+    departamento = Departamento.find(params[:id])
+    @ciudades = departamento.ciudades
+
+    respond_to do |format|
+      format.json { render :index }
+    end
+end
+
   # GET /ciudades/new
   def new
     @ciudad = Ciudad.new

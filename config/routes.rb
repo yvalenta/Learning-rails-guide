@@ -1,4 +1,11 @@
 VisionamosMiniCoffe::Application.routes.draw do
+
+  resources :ciudades do
+    collection do
+      get 'search/:id', to: 'ciudades#search'
+    end
+  end
+
   resources :clientes
 
   resources :ciudades
