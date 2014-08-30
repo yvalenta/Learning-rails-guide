@@ -26,8 +26,8 @@
       <file leaf-file-name="ciudades.js.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ciudades.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3529412" vertical-offset="0" max-vertical-offset="810">
-              <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.5294118" vertical-offset="0" max-vertical-offset="954">
+              <caret line="18" column="41" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -132,12 +132,12 @@
         <option value="$PROJECT_DIR$/app/models/departamento.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/ciudades_controller.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/ciudades.js.coffee" />
         <option value="$PROJECT_DIR$/app/controllers/clientes_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/clientes/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/models/cliente.rb" />
         <option value="$PROJECT_DIR$/app/views/clientes/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/clientes/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/ciudades.js.coffee" />
       </list>
     </option>
   </component>
@@ -623,7 +623,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="31" y="-3" width="1335" height="771" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24980666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -792,8 +792,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ciudades.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3529412" vertical-offset="0" max-vertical-offset="810">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.5294118" vertical-offset="0" max-vertical-offset="954">
+          <caret line="18" column="41" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
           <folding />
         </state>
       </provider>
