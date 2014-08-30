@@ -4,4 +4,5 @@
 
 $(document).on 'page:change', ->
   $('#departamento').change ->
-    alert $(@).val()
+    $.getJSON '/ciudades/search/1.json', (data) ->
+      console.log data
