@@ -18,7 +18,12 @@ module Searchable
     end
 
     def searchable_methods
+      attributes_names -excluded_methods
       %w{}
+    end
+
+    def excluded_methods
+      %{}
     end
 
   end
