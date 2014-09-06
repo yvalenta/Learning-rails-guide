@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/fido/Escritorio/CursoRubenAdvanced/visionamos_test/app/models/empresa.rb": [
+      "/home/fido/Escritorio/CursoRubenAdvanced/visionamos_test/app/models/cliente.rb": [
         1,
         1,
         null,
@@ -12,8 +12,10 @@
         1,
         1,
         null,
+        null,
         1,
         1,
+        null,
         null,
         null
       ],
@@ -64,6 +66,6 @@
         null
       ]
     },
-    "timestamp": 1410014471
+    "timestamp": 1410015910
   }
 }
