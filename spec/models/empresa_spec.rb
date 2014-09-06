@@ -31,17 +31,15 @@ describe Empresa do
 
   describe 'Metodos de instancia' do
     it 'Debe retornar 10 veces el nombre' do
-      empresa = Empresa.new( nombre: 'Empresa del Perro',
-                             departamento_id: 1,
-                             ciudad_id: 1)
+      empresa = FactoryGirl.build( :empresa )
       expect(empresa.nombre_largo).to eq(empresa.nombre * 10)
     end
   end
 
   describe 'Metodos de clase' do
     before :each do
-      @telecom =  Empresa.create( nombre: 'telecom', departamento_id: 1, ciudad_id: 1 )
-      @colombiano = Empresa.create( nombre: 'colombiano', departamento_id: 1, ciudad_id: 1 )
+      @telecom =  FactoryGirl.create( :empresa, nombre: 'Telecom' )
+      @colombiano = FactoryGirl.create( :empresa )
     end
 
 
