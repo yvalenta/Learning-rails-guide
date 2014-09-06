@@ -32,12 +32,24 @@ describe Empresa do
 
   describe 'Metodos de instancia' do
     it 'Debe retornar 10 veces el nombre' do
-      expect(true).to be true
+      empresa = Empresa.new( nombre: 'Empresa del Perro',
+                             departamento_id: 1,
+                             ciudad_id: 1)
+      expect(empresa.nombre_largo).to eq(empresa.nombre * 10)
     end
   end
 
   describe 'Metodos de clase' do
+    context 'listado de empresas' do
+
+    end
+
+    context 'busqueda de empresa sin resultado' do
+
+    end
 
   end
+
+
 
 end
