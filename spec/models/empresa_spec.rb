@@ -41,10 +41,22 @@ describe Empresa do
 
   describe 'Metodos de clase' do
     context 'listado de empresas' do
+      it 'Debe retornar una coleccion de varias empresas' do
+        empresa = Empresa.create( nombre: 'empresa perro1', departamento_id: 1, ciudad_id: 1 )
+        empresa1 = Empresa.create( nombre: 'empresa perro2', departamento_id: 1, ciudad_id: 1 )
+        expect(Empresa.search('err')).to eq [empresa, empresa1]
+      end
+
+      it 'Debe retornar una coleccion de un asola empresa' do
+        empresa = Empresa.create( nombre: 'empresa perro1', departamento_id: 1, ciudad_id: 1 )
+        empresa1 = Empresa.create( nombre: 'empresa perro2', departamento_id: 1, ciudad_id: 1 )
+        expect(Empresa.search('err')).to eq [empresa, empresa1]
+      end
 
     end
 
     context 'busqueda de empresa sin resultado' do
+      it 'Debe retornar una coleccion de empresa vaciss'
 
     end
 

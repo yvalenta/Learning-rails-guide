@@ -1,4 +1,6 @@
 class Empresa < ActiveRecord::Base
+  include Searchable
+
   belongs_to :ciudad
   belongs_to :departamento
 
