@@ -4,7 +4,7 @@ describe Empresa do
 
   describe 'validaciones' do
     before :each do
-      @empresa = FactoryGirl.build(:empresa)
+      @empresa = build(:empresa)
     end
 
     it 'Es valido con nombre y ciudad' do
@@ -31,15 +31,15 @@ describe Empresa do
 
   describe 'Metodos de instancia' do
     it 'Debe retornar 10 veces el nombre' do
-      empresa = FactoryGirl.build( :empresa )
+      empresa = build( :empresa )
       expect(empresa.nombre_largo).to eq(empresa.nombre * 10)
     end
   end
 
   describe 'Metodos de clase' do
     before :each do
-      @telecom =  FactoryGirl.create( :empresa, nombre: 'Telecom' )
-      @colombiano = FactoryGirl.create( :empresa )
+      @telecom =  create( :empresa, nombre: 'Telecom' )
+      @colombiano = create( :empresa )
     end
 
 
