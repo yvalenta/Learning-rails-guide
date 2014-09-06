@@ -36,8 +36,8 @@
       <file leaf-file-name="empresa_spec.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spec/models/empresa_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4549763" vertical-offset="540" max-vertical-offset="1803">
-              <caret line="46" column="62" selection-start-line="46" selection-start-column="54" selection-end-line="46" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.6255924" vertical-offset="540" max-vertical-offset="1803">
+              <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -110,9 +110,9 @@
         <option value="$PROJECT_DIR$/.rspec" />
         <option value="$PROJECT_DIR$/spec/models/agencia_spec.rb" />
         <option value="$PROJECT_DIR$/spec/rails_helper.rb" />
-        <option value="$PROJECT_DIR$/spec/models/empresa_spec.rb" />
         <option value="$PROJECT_DIR$/app/models/empresa.rb" />
         <option value="$PROJECT_DIR$/app/models/concerns/searchable.rb" />
+        <option value="$PROJECT_DIR$/spec/models/empresa_spec.rb" />
       </list>
     </option>
   </component>
@@ -865,8 +865,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/models/empresa_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4549763" vertical-offset="540" max-vertical-offset="1803">
-          <caret line="46" column="62" selection-start-line="46" selection-start-column="54" selection-end-line="46" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.6255924" vertical-offset="540" max-vertical-offset="1803">
+          <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
           <folding />
         </state>
       </provider>

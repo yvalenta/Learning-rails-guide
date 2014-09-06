@@ -50,7 +50,7 @@ describe Empresa do
       it 'Debe retornar una coleccion de un asola empresa' do
         empresa = Empresa.create( nombre: 'empresa perro1', departamento_id: 1, ciudad_id: 1 )
         empresa1 = Empresa.create( nombre: 'empresa perro2', departamento_id: 1, ciudad_id: 1 )
-        expect(Empresa.search('err')).to eq [empresa, empresa1]
+        expect(Empresa.search('paila')).not_to eq [empresa, empresa1]
       end
 
     end
