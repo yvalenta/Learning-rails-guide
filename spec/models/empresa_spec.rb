@@ -62,7 +62,4 @@ describe Empresa do
     end
 
   end
-
-
-
 end
