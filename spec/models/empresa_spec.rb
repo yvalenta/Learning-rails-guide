@@ -14,11 +14,16 @@ describe Empresa do
     expect(empresa.errors[:nombre].count).to eq 1
   end
   it 'Es invalido sin ciudad' do
-    empresa = Empresa.new( ciudad_id: 1)
-    expect(empresa).to be_valid
+    empresa = Empresa.new( ciudad_id:nil)
+    empresa.valid?
+    p empresa.errors[:ciudad_id]
+    expect(empresa.errors[:ciudad_id].count).to eq 1
   end
   it 'Es invalido sin departamento' do
-    expect(true).to be true
+    empresa = Empresa.new( departamento_id:nil)
+    empresa.valid?
+    p empresa.errors[:departamento_id]
+    expect(empresa.errors[:departamento_id].count).to eq 1
   end
   it 'Debe retornar 10 veces el nombre' do
     expect(true).to be true
