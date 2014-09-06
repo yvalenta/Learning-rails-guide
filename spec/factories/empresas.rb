@@ -5,5 +5,6 @@ FactoryGirl.define do
     nombre "El colombiano"
     association :ciudad
     association :departamento
+
   end
 end
