@@ -1,31 +1,32 @@
 require 'rails_helper'
 
 describe Empresa do
-  describe 'validaciones' do
 
-    it 'Es valido con nombre y ciudad' do
-      empresa = Empresa.new( nombre: 'Empresa del Perro',
+
+  describe 'validaciones' do
+    before :each do
+      @empresa = Empresa.new( nombre: 'Empresa del Perro',
                              departamento_id: 1,
                              ciudad_id: 1)
-      expect(empresa).to be_valid
     end
+    it 'Es valido con nombre y ciudad' do
+      expect(@empresa).to be_valid
+    end
+
     it 'Es invalido sin nombre' do
-      empresa = Empresa.new( nombre:nil )
-      empresa.valid?
-      p empresa.errors[:nombre]
-      expect(empresa.errors[:nombre].count).to eq 1
+      @empresa.nombre = nil
+      @empresa.valid?
+      expect(@empresa.errors[:nombre].count).to eq 1
     end
     it 'Es invalido sin ciudad' do
-      empresa = Empresa.new( ciudad_id:nil)
-      empresa.valid?
-      p empresa.errors[:ciudad_id]
-      expect(empresa.errors[:ciudad_id].count).to eq 1
+      @empresa.ciudad_id = nil
+      @empresa.valid?
+      expect(@empresa.errors[:ciudad_id].count).to eq 1
     end
     it 'Es invalido sin departamento' do
-      empresa = Empresa.new( departamento_id:nil)
-      empresa.valid?
-      p empresa.errors[:departamento_id]
-      expect(empresa.errors[:departamento_id].count).to eq 1
+      @empresa.departamento_id = nil
+      @empresa.valid?
+      expect(@empresa.errors[:departamento_id].count).to eq 1
     end
 
   end
@@ -40,24 +41,27 @@ describe Empresa do
   end
 
   describe 'Metodos de clase' do
+    before :each do
+      @telecom =  Empresa.create( nombre: 'telecom', departamento_id: 1, ciudad_id: 1 )
+      @colombiano = Empresa.create( nombre: 'colombiano', departamento_id: 1, ciudad_id: 1 )
+    end
+
+
     context 'listado de empresas' do
       it 'Debe retornar una coleccion de varias empresas' do
-        empresa = Empresa.create( nombre: 'empresa perro1', departamento_id: 1, ciudad_id: 1 )
-        empresa1 = Empresa.create( nombre: 'empresa perro2', departamento_id: 1, ciudad_id: 1 )
-        expect(Empresa.search('err')).to eq [empresa, empresa1]
+        expect(Empresa.search('om')).to eq [@telecom, @colombiano]
       end
 
-      it 'Debe retornar una coleccion de un asola empresa' do
-        empresa = Empresa.create( nombre: 'empresa perro1', departamento_id: 1, ciudad_id: 1 )
-        empresa1 = Empresa.create( nombre: 'empresa perro2', departamento_id: 1, ciudad_id: 1 )
-        expect(Empresa.search('paila')).not_to eq [empresa, empresa1]
+      it 'Debe retornar una coleccion de una sola empresa' do
+        expect(Empresa.search('colombiano')).to eq [@colombiano]
       end
 
     end
 
     context 'busqueda de empresa sin resultado' do
-      it 'Debe retornar una coleccion de empresa vaciss'
-
+      it 'Debe retornar una coleccion de empresa vacia' do
+        expect(Empresa.search('entrega')).not_to include @colombiano
+      end
     end
 
   end

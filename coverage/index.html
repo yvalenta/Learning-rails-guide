@@ -14,7 +14,7 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-09-06T08:11:27-05:00">2014-09-06T08:11:27-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-09-06T08:40:57-05:00">2014-09-06T08:40:57-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.59
+         2.05
        </span>
     </span> hits/line)
   </h2>
@@ -57,7 +57,7 @@
         <td>17</td>
         <td>17</td>
         <td>0</td>
-        <td>1.9</td>
+        <td>2.6</td>
       </tr>
       
       <tr>
@@ -120,7 +120,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.59
+         2.05
        </span>
     </span> hits/line)
   </h2>
@@ -152,7 +152,7 @@
         <td>17</td>
         <td>17</td>
         <td>0</td>
-        <td>1.9</td>
+        <td>2.6</td>
       </tr>
       
       <tr>
@@ -323,8 +323,8 @@
           <code class="ruby">    def search(pattern)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="4">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="4">
+          <span class="hits">3</span>
           
           <code class="ruby">      where(full_statement(pattern))</code>
         </li>
@@ -347,8 +347,8 @@
           <code class="ruby">    def full_statement(pattern)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="8">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="8">
+          <span class="hits">3</span>
           
           <code class="ruby">      statements(pattern).join(&#39; OR &#39;)</code>
         </li>
@@ -371,14 +371,14 @@
           <code class="ruby">    def statements(pattern)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="12">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="12">
+          <span class="hits">3</span>
           
           <code class="ruby">      searchable_methods.map do |method|</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="13">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="18" data-linenumber="13">
+          <span class="hits">18</span>
           
           <code class="ruby">        &quot;#{method} LIKE &#39;%#{pattern}%&#39;&quot;</code>
         </li>
@@ -407,8 +407,8 @@
           <code class="ruby">    def searchable_methods</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="18">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="18">
+          <span class="hits">3</span>
           
           <code class="ruby">      attribute_names - excluded_methods</code>
         </li>
@@ -431,8 +431,8 @@
           <code class="ruby">    def excluded_methods</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="22">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="22">
+          <span class="hits">3</span>
           
           <code class="ruby">      %w{}</code>
         </li>
