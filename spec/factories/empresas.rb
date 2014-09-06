@@ -2,8 +2,8 @@
 
 FactoryGirl.define do
   factory :empresa do
-    nombre "MyString"
-    ciudad nil
-    departamento_references "MyString"
+    nombre "El colombiano"
+    ciudad_id 1
+    departamento_id 2
   end
 end
