@@ -2,13 +2,11 @@ require 'rails_helper'
 
 describe Empresa do
 
-
   describe 'validaciones' do
     before :each do
-      @empresa = Empresa.new( nombre: 'Empresa del Perro',
-                             departamento_id: 1,
-                             ciudad_id: 1)
+      @empresa = FactoryGirl.build(:empresa)
     end
+
     it 'Es valido con nombre y ciudad' do
       expect(@empresa).to be_valid
     end
