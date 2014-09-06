@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :empresa do
-    nombre "El colombiano"
+    nombre { Faker::Company::name }
     association :ciudad
     association :departamento
 

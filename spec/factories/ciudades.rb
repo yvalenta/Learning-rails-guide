@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :ciudad do
-    nombre "Medellin"
-    cod_dane '1234'
+    nombre { Faker::Address.city }
+    cod_dane { Faker::Address.zip_code }
     association :departamento
   end
 end

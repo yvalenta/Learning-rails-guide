@@ -39,17 +39,18 @@ describe Empresa do
   describe 'Metodos de clase' do
     before :each do
       @telecom =  create( :empresa, nombre: 'Telecom' )
-      @colombiano = create( :empresa )
+      @colombiano = create( :empresa, nombre: "El colombiano" )
+      create( :empresa )
     end
 
 
     context 'listado de empresas' do
       it 'Debe retornar una coleccion de varias empresas' do
-        expect(Empresa.search('om')).to eq [@telecom, @colombiano]
+        expect(Empresa.search('om')).to include @telecom, @colombiano
       end
 
       it 'Debe retornar una coleccion de una sola empresa' do
-        expect(Empresa.search('colombiano')).to eq [@colombiano]
+        expect(Empresa.search('colombiano')).to include @colombiano
       end
 
     end
