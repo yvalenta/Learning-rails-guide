@@ -52,8 +52,18 @@
         1,
         null,
         null
+      ],
+      "/home/fido/Escritorio/CursoRubenAdvanced/visionamos_test/app/models/ciudad.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/fido/Escritorio/CursoRubenAdvanced/visionamos_test/app/models/departamento.rb": [
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1410012581
+    "timestamp": 1410012940
   }
 }
