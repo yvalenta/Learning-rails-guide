@@ -79,7 +79,8 @@ describe EmpresasController do
       end
 
       it 'Redireccion de la vista :new' do
-
+        post :create, empresa: attributes_with_foreign_keys(:empresa_invalida)
+        expect(response).to render_template :new
 
       end
   end
