@@ -3,11 +3,13 @@ require 'rails_helper'
 describe EmpresasController do
 
   describe 'get #index' do
+    before :each do
+      @empresa = create(:empresa)
+    end
     #context 'Collection de empresas en vble @empresas' do
     it 'Retorne una coleccion en @empresas' do
-      empresa1 = create(:empresa)
-      get :index
-      expect(assigns(:empresas)).to include(empresa1)
+     get :index
+      expect(assigns(:empresas)).to include(@empresa)
     end
     it 'Render de la vista :index' do
       get :index
@@ -17,28 +19,30 @@ describe EmpresasController do
   end
 
   describe 'get #show' do
+    before :each do
+      @empresa = create(:empresa)
+    end
     it 'Retorne un objeto en vble @empresas' do
-      empresa = create(:empresa)
-      get :show, id: empresa
-      expect(assigns(:empresa)).to eq empresa
+      get :show, id: @empresa
+      expect(assigns(:empresa)).to eq @empresa
     end
     it 'Render de la vista :show' do
-      empresa = create(:empresa)
-      get :show, id: empresa
+      get :show, id: @empresa
       expect(response).to render_template :show
     end
 
   end
 
   describe 'get #edit' do
+    before :each do
+      @empresa = create(:empresa)
+    end
     it 'Retorne un objeto en vble @empresas' do
-      empresa = create(:empresa)
-      get :edit, id: empresa
-      expect(assigns(:empresa)).to eq empresa
+      get :edit, id: @empresa
+      expect(assigns(:empresa)).to eq @empresa
     end
     it 'Render de la vista :edit' do
-      empresa = create(:empresa)
-      get :edit, id:empresa
+      get :edit, id: @empresa
       expect(response).to render_template :edit
     end
 
@@ -86,50 +90,49 @@ describe EmpresasController do
   end
 
   describe 'patch #update' do
+    before :each do
+      @empresa = create(:empresa)
+    end
     context 'Con datos validos' do
       it 'Debe actualizar la empresa en la BD' do
-        empresa = create(:empresa)
-        patch :update, id: empresa, empresa: attributes_for(:empresa, nombre: 'Visionamos')
-        empresa.reload
-        expect(empresa.nombre).to eq 'Visionamos'
+        patch :update, id: @empresa, empresa: attributes_for(:empresa, nombre: 'Visionamos')
+        @empresa.reload
+        expect(@empresa.nombre).to eq 'Visionamos'
       end
       it 'Debe redireccionar a la vista :show' do
-        empresa = create(:empresa)
-        patch :update, id: empresa, empresa: attributes_for(:empresa, nombre: 'Visionamos')
-        expect(response).to redirect_to empresa_path(empresa)
+        patch :update, id: @empresa, empresa: attributes_for(:empresa, nombre: 'Visionamos')
+        expect(response).to redirect_to empresa_path(@empresa)
       end
 
     end
 
     context 'Con datos NO validos' do
       it 'No debe guardar en BD' do
-        empresa = create(:empresa)
-        patch :update, id: empresa, empresa: attributes_for(:empresa_invalida)
-        empresa.reload
-        expect(empresa.nombre).not_to eq nil
+        patch :update, id: @empresa, empresa: attributes_for(:empresa_invalida)
+        @empresa.reload
+        expect(@empresa.nombre).not_to eq nil
       end
 
       it 'Debe hacer render de la vista :edit' do
-        empresa = create(:empresa)
-        patch :update, id: empresa, empresa: attributes_for(:empresa_invalida)
-        empresa.reload
+        patch :update, id: @empresa, empresa: attributes_for(:empresa_invalida)
+        @empresa.reload
         expect(response).to render_template :edit
       end
     end
   end
 
   describe 'destroy #destroy' do
-
+    before :each do
+      @empresa = create(:empresa)
+    end
     it 'Elimina empresa' do
-      empresa = create(:empresa)
       expect {
-        delete :destroy, id: empresa
+        delete :destroy, id: @empresa
       }.to change(Empresa, :count).by(-1)
     end
 
     it 'Debe redireccionar la vista :index' do
-      empresa = create(:empresa)
-      delete :destroy, id: empresa
+      delete :destroy, id: @empresa
       expect(response).to redirect_to empresas_path
     end
 
