@@ -93,7 +93,12 @@ describe EmpresasController do
         empresa.reload
         expect(empresa.nombre).to eq 'Visionamos'
       end
-      it 'Debe redireccionar a la vista :show'
+      it 'Debe redireccionar a la vista :show' do
+        empresa = create(:empresa)
+        patch :update, id: empresa, empresa: attributes_for(:empresa, nombre: 'Visionamos')
+        expect(response).to redirect_to empresa_path(empresa)
+      end
+
     end
 
     context 'Con datos NO validos' do
