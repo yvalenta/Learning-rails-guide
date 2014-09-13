@@ -102,14 +102,31 @@ describe EmpresasController do
     end
 
     context 'Con datos NO validos' do
-      it 'No debe guardar en BD'
-      it 'Deba hacer render de la vista :edit'
+      it 'No debe guardar en BD' do
+        empresa = create(:empresa)
+        patch :update, id: empresa, empresa: attributes_for(:empresa_invalida)
+        empresa.reload
+        expect(empresa.nombre).not_to eq nil
+      end
+
+      it 'Debe hacer render de la vista :edit' do
+        empresa = create(:empresa)
+        patch :update, id: empresa, empresa: attributes_for(:empresa_invalida)
+        empresa.reload
+        expect(response).to render_template :edit
+      end
     end
-
-
   end
 
   describe 'destroy #destroy' do
+
+    context 'Borrando empresa de la BD' do
+
+    end
+
+    context 'No se borra de la BD' do
+
+    end
 
   end
 
