@@ -4,15 +4,15 @@ describe EmpresasController do
 
   describe 'get #index' do
     #context 'Collection de empresas en vble @empresas' do
-      it 'Retorne una coleccion en @empresas' do
-        empresa1 = create(:empresa)
-        get :index
-        expect(assigns(:empresas)).to include(empresa1)
-      end
-      it 'Render de la vista :index' do
-        get :index
-        expect(response).to render_template :index
-      end
+    it 'Retorne una coleccion en @empresas' do
+      empresa1 = create(:empresa)
+      get :index
+      expect(assigns(:empresas)).to include(empresa1)
+    end
+    it 'Render de la vista :index' do
+      get :index
+      expect(response).to render_template :index
+    end
 
   end
 
@@ -56,38 +56,43 @@ describe EmpresasController do
   end
 
   describe 'post #create'
-    context 'Con datos validos' do
-      it 'Guardar nueva empresa en BD' do
-        p 'pailaaa'
-        p Empresa.all
+  context 'Con datos validos' do
+    it 'Guardar nueva empresa en BD' do
+      p 'pailaaa'
+      p Empresa.all
 
-        expect {
-          post :create, empresa: attributes_with_foreign_keys(:empresa)
-        }.to change(Empresa, :count).by(1)
-      end
-      it 'redireccion al :show de la empresa creada' do
+      expect {
         post :create, empresa: attributes_with_foreign_keys(:empresa)
-        expect(response).to redirect_to empresa_path(assigns(:empresa))
-      end
+      }.to change(Empresa, :count).by(1)
+    end
+    it 'redireccion al :show de la empresa creada' do
+      post :create, empresa: attributes_with_foreign_keys(:empresa)
+      expect(response).to redirect_to empresa_path(assigns(:empresa))
+    end
+  end
+
+  context 'Con datos invalidos' do
+    it 'No se guardo registro en BD' do
+      expect {
+        post :create, empresa: attributes_with_foreign_keys(:empresa_invalida, nombre: nil)
+      }.not_to change(Empresa, :count)
     end
 
-    context 'Con datos invalidos' do
-      it 'No se guardo registro en BD' do
-        expect {
-          post :create, empresa: attributes_with_foreign_keys(:empresa_invalida, nombre: nil)
-        }.not_to change(Empresa, :count)
-      end
+    it 'Redireccion de la vista :new' do
+      post :create, empresa: attributes_with_foreign_keys(:empresa_invalida)
+      expect(response).to render_template :new
 
-      it 'Redireccion de la vista :new' do
-        post :create, empresa: attributes_with_foreign_keys(:empresa_invalida)
-        expect(response).to render_template :new
-
-      end
+    end
   end
 
   describe 'patch #update' do
     context 'Con datos validos' do
-      it 'Debe actualizar la empresa en la BD'
+      it 'Debe actualizar la empresa en la BD' do
+        empresa = create(:empresa)
+        patch :update, id: empresa, empresa: attributes_for(:empresa, nombre: 'Visionamos')
+        empresa.reload
+        expect(empresa.nombre).to eq 'Visionamos'
+      end
       it 'Debe redireccionar a la vista :show'
     end
 
