@@ -19,7 +19,7 @@ class CiudadesController < ApplicationController
     respond_to do |format|
       format.json { render :index }
     end
-end
+  end
 
   # GET /ciudades/new
   def new
