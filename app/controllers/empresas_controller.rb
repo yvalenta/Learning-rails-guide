@@ -10,6 +10,7 @@ class EmpresasController < ApplicationController
       format.html
       format.json
       format.csv { send_data @empresas.export_csv}
+      format.xls { send_data @empresas.export_csv(col_sep: '\t')}
     end
   end
 

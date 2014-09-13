@@ -1,0 +1,6 @@
+id\tnombre\tciudad_id\t"created_at"\t"updated_at"\t"departamento_id"
+1\tVisionamos\t1\t2014-08-30 11:40:14 UTC\t2014-08-30 11:40:14 UTC\t
+2\t"Otra"\t2\t2014-08-30 11:50:10 UTC\t2014-08-30 11:50:10 UTC\t
+3\tsegurcol\t2\t2014-08-30 13:53:14 UTC\t2014-08-30 13:53:14 UTC\t1
+4\t"coltejer"\t7\t2014-08-30 14:02:30 UTC\t2014-08-30 14:02:30 UTC\t1
+5\tsofasa\t1\t2014-08-30 14:09:04 UTC\t2014-08-30 14:09:04 UTC\t1
