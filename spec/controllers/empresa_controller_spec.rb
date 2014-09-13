@@ -74,7 +74,7 @@ describe EmpresasController do
     context 'Con datos invalidos' do
       it 'No se guardo registro en BD' do
         expect {
-          post :create, empresa: attributes_with_foreign_keys(:empresa, nombre: nil)
+          post :create, empresa: attributes_with_foreign_keys(:empresa_invalida, nombre: nil)
         }.not_to change(Empresa, :count)
       end
 

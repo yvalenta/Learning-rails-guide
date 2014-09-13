@@ -5,5 +5,9 @@ FactoryGirl.define do
     association :ciudad
     association :departamento
 
+    factory :empresa_invalida do
+      nombre nil
+    end
+
   end
 end
