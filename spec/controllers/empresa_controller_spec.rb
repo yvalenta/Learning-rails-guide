@@ -86,6 +86,16 @@ describe EmpresasController do
   end
 
   describe 'patch #update' do
+    context 'Con datos validos' do
+      it 'Debe actualizar la empresa en la BD'
+      it 'Debe redireccionar a la vista :show'
+    end
+
+    context 'Con datos NO validos' do
+      it 'No debe guardar en BD'
+      it 'Deba hacer render de la vista :edit'
+    end
+
 
   end
 
