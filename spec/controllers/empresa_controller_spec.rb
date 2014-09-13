@@ -17,6 +17,16 @@ describe EmpresasController do
       expect(JSON.parse(response.body)).to be_an Array
     end
 
+    it 'Retorna archivo CSV' do
+      get :index, :format => :csv
+      expect(response.headers['Content-Type']).to eq 'application/octet-stream'
+    end
+
+    it 'Retorna archivo XLS' do
+      get :index, :format => :xls
+      p response.headers
+    end
+
     it 'Render de la vista :index' do
       get :index
       expect(response).to render_template :index
