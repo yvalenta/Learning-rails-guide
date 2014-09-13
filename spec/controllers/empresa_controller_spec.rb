@@ -11,6 +11,10 @@ describe EmpresasController do
      get :index
       expect(assigns(:empresas)).to include(@empresa)
     end
+    it 'Retorna unbn1 JSON con el listado de empresas' do
+      get :index,  format: :json
+      p response
+    end
     it 'Render de la vista :index' do
       get :index
       expect(response).to render_template :index
