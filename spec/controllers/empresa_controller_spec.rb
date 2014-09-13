@@ -120,12 +120,17 @@ describe EmpresasController do
 
   describe 'destroy #destroy' do
 
-    context 'Borrando empresa de la BD' do
-
+    it 'Elimina empresa' do
+      empresa = create(:empresa)
+      expect {
+        delete :destroy, id: empresa
+      }.to change(Empresa, :count).by(-1)
     end
 
-    context 'No se borra de la BD' do
-
+    it 'Debe redireccionar la vista :index' do
+      empresa = create(:empresa)
+      delete :destroy, id: empresa
+      expect(response).to redirect_to empresas_path
     end
 
   end

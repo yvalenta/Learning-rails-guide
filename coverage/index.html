@@ -14,18 +14,18 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-09-13T08:27:41-05:00">2014-09-13T08:27:41-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-09-13T08:34:25-05:00">2014-09-13T08:34:25-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">83.08%</span></span>
+    (<span class="covered_percent"><span class="yellow">89.23%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.54
+         1.74
        </span>
     </span> hits/line)
   </h2>
@@ -33,8 +33,8 @@
   <div>
     <b>6</b> files in total.
     <b>65</b> relevant lines. 
-    <span class="green"><b>54</b> lines covered</span> and
-    <span class="red"><b>11</b> lines missed </span>
+    <span class="green"><b>58</b> lines covered</span> and
+    <span class="red"><b>7</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -62,12 +62,12 @@
       
       <tr>
         <td class="strong"><a href="#2e7ebda58e16f6fbafbd5b726ddc4da4b7851831" class="src_link" title="app/controllers/empresas_controller.rb">app/controllers/empresas_controller.rb</a></td>
-        <td class="yellow strong">87.88 %</td>
+        <td class="green strong">100.0 %</td>
         <td>74</td>
         <td>33</td>
-        <td>29</td>
-        <td>4</td>
-        <td>2.3</td>
+        <td>33</td>
+        <td>0</td>
+        <td>2.7</td>
       </tr>
       
       <tr>
@@ -119,11 +119,11 @@
           <div class="file_list_container" id="Controllers">
   <h2>
     <span class="group_name">Controllers</span>
-    (<span class="covered_percent"><span class="yellow">88.57%</span></span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.23
+         2.6
        </span>
     </span> hits/line)
   </h2>
@@ -131,8 +131,8 @@
   <div>
     <b>2</b> files in total.
     <b>35</b> relevant lines. 
-    <span class="green"><b>31</b> lines covered</span> and
-    <span class="red"><b>4</b> lines missed </span>
+    <span class="green"><b>35</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -160,12 +160,12 @@
       
       <tr>
         <td class="strong"><a href="#2e7ebda58e16f6fbafbd5b726ddc4da4b7851831" class="src_link" title="app/controllers/empresas_controller.rb">app/controllers/empresas_controller.rb</a></td>
-        <td class="yellow strong">87.88 %</td>
+        <td class="green strong">100.0 %</td>
         <td>74</td>
         <td>33</td>
-        <td>29</td>
-        <td>4</td>
-        <td>2.3</td>
+        <td>33</td>
+        <td>0</td>
+        <td>2.7</td>
       </tr>
       
     </tbody>
@@ -422,11 +422,11 @@
         <div class="source_table" id="2e7ebda58e16f6fbafbd5b726ddc4da4b7851831">
   <div class="header">
     <h3>app/controllers/empresas_controller.rb</h3>
-    <h4><span class="yellow">87.88 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>33</b> relevant lines. 
-      <span class="green"><b>29</b> lines covered</span> and
-      <span class="red"><b>4</b> lines missed.</span>
+      <span class="green"><b>33</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -769,26 +769,26 @@
           <code class="ruby">  def destroy</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="57">
-          
+        <li class="covered" data-hits="2" data-linenumber="57">
+          <span class="hits">2</span>
           
           <code class="ruby">    @empresa.destroy</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="58">
-          
+        <li class="covered" data-hits="2" data-linenumber="58">
+          <span class="hits">2</span>
           
           <code class="ruby">    respond_to do |format|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="59">
-          
+        <li class="covered" data-hits="4" data-linenumber="59">
+          <span class="hits">4</span>
           
           <code class="ruby">      format.html { redirect_to empresas_url }</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="60">
-          
+        <li class="covered" data-hits="2" data-linenumber="60">
+          <span class="hits">2</span>
           
           <code class="ruby">      format.json { head :no_content }</code>
         </li>
@@ -829,8 +829,8 @@
           <code class="ruby">    def set_empresa</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="67">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="10" data-linenumber="67">
+          <span class="hits">10</span>
           
           <code class="ruby">      @empresa = Empresa.find(params[:id])</code>
         </li>
