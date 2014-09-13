@@ -5,6 +5,12 @@ class EmpresasController < ApplicationController
   # GET /empresas.json
   def index
     @empresas = Empresa.all
+
+    respond_to do |format|
+      format.html
+      format.json
+      format.csv { send_data @empresas.export_csv}
+    end
   end
 
   # GET /empresas/1

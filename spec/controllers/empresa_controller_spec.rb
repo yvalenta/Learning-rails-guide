@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe EmpresasController do
-
+  render_views
   describe 'get #index' do
     before :each do
       @empresa = create(:empresa)
@@ -11,10 +11,12 @@ describe EmpresasController do
      get :index
       expect(assigns(:empresas)).to include(@empresa)
     end
-    it 'Retorna unbn1 JSON con el listado de empresas' do
-      get :index,  format: :json
-      p response
+
+    it 'Retorna un JSON con el listado de empresas' do
+      get :index,  :format => :json
+      expect(JSON.parse(response.body)).to be_an Array
     end
+
     it 'Render de la vista :index' do
       get :index
       expect(response).to render_template :index

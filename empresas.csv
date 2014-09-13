@@ -1,0 +1,6 @@
+id;nombre;ciudad_id;created_at;updated_at;departamento_id
+1;Visionamos;1;2014-08-30 11:40:14 UTC;2014-08-30 11:40:14 UTC;
+2;Otra;2;2014-08-30 11:50:10 UTC;2014-08-30 11:50:10 UTC;
+3;segurcol;2;2014-08-30 13:53:14 UTC;2014-08-30 13:53:14 UTC;1
+4;coltejer;7;2014-08-30 14:02:30 UTC;2014-08-30 14:02:30 UTC;1
+5;sofasa;1;2014-08-30 14:09:04 UTC;2014-08-30 14:09:04 UTC;1

@@ -1,5 +1,6 @@
 class Empresa < ActiveRecord::Base
   include Searchable
+  include Exportable
 
   belongs_to :ciudad
   belongs_to :departamento
