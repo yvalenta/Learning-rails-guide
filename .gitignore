@@ -1,8 +1,11 @@
 *.rbc
 capybara-*.html
+
+
 .rspec
 .idea/*
 .idea/
+coverage/*
 /log
 /tmp
 /db/*.sqlite3
