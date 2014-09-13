@@ -62,13 +62,13 @@ describe EmpresasController do
         p Empresa.all
 
         expect {
-          post :create, empresa: attributer_with_foreign_keys(:empresa)
+          post :create, empresa: attributes_with_foreign_keys(:empresa)
         }.to change(Empresa, :count).by(1)
       end
-      it 'redireccion al :show de la empresa creada'
-
-
-
+      it 'redireccion al :show de la empresa creada' do
+        post :create, empresa: attributes_with_foreign_keys(:empresa)
+        expect(response).to redirect_to empresa_path(assigns(:empresa))
+      end
     end
 
     context 'Con datos invalidos' do
