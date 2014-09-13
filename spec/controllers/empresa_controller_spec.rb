@@ -55,7 +55,7 @@ describe EmpresasController do
     end
   end
 
-  describe 'post #create' do
+  describe 'post #create'
     context 'Con datos validos' do
       it 'Guardar nueva empresa en BD' do
         p 'pailaaa'
@@ -72,11 +72,16 @@ describe EmpresasController do
     end
 
     context 'Con datos invalidos' do
-      it 'No se guardo registro en BD'
-      it 'Redireccion de la vista :new'
+      it 'No se guardo registro en BD' do
+        expect {
+          post :create, empresa: attributes_with_foreign_keys(:empresa, nombre: nil)
+        }.not_to change(Empresa, :count)
+      end
 
-    end
+      it 'Redireccion de la vista :new' do
 
+
+      end
   end
 
   describe 'patch #update' do
