@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
       current_user
     else
       flash[:warning] = 'Debe iniciar sesion'
-      redirect_to new_session_path and return
+      redirect_to new_sesion_path and return
       false
     end
   end

@@ -18,10 +18,10 @@
 <% end %>
 <br/>
 <% if @current_user %>
-  <%= @current_user.nombre %> -
-  <%= link_to 'Salir', sesion_path(1), method: :delete %>
+    <%= @current_user.nombre %> -
+    <%= link_to 'Salir', sesion_path(1), method: :delete %>
 <% else %>
-  <%= link_to 'Ingresar', new_sesion_path %>
+    <%= link_to 'Ingresar', new_sesion_path %>
 <% end %>
 
 <%# @current_user.try(:nombre) %>

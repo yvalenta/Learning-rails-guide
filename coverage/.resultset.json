@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/fido/Escritorio/CursoRubenAdvanced/visionamos_test/app/controllers/ciudades_controller.rb": [
+      "/home/fido/Escritorio/CursoRubenAdvanced/visionamos_test sesion 4/app/controllers/ciudades_controller.rb": [
         1,
         1,
         null,
@@ -17,11 +17,11 @@
         null,
         null,
         1,
-        1,
-        1,
+        0,
+        0,
         null,
-        1,
-        2,
+        0,
+        0,
         null,
         null,
         null,
@@ -86,14 +86,30 @@
         null,
         null
       ],
-      "/home/fido/Escritorio/CursoRubenAdvanced/visionamos_test/app/controllers/application_controller.rb": [
+      "/home/fido/Escritorio/CursoRubenAdvanced/visionamos_test sesion 4/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
+        1,
+        null,
+        1,
+        25,
+        21,
+        null,
+        4,
+        4,
+        0,
+        null,
+        null,
+        null,
+        1,
+        21,
+        null,
+        null,
         null
       ],
-      "/home/fido/Escritorio/CursoRubenAdvanced/visionamos_test/app/controllers/empresas_controller.rb": [
+      "/home/fido/Escritorio/CursoRubenAdvanced/visionamos_test sesion 4/app/controllers/empresas_controller.rb": [
         1,
         1,
         null,
@@ -176,7 +192,7 @@
         null,
         null
       ],
-      "/home/fido/Escritorio/CursoRubenAdvanced/visionamos_test/app/models/cliente.rb": [
+      "/home/fido/Escritorio/CursoRubenAdvanced/visionamos_test sesion 4/app/models/cliente.rb": [
         1,
         1,
         null,
@@ -194,7 +210,7 @@
         null,
         null
       ],
-      "/home/fido/Escritorio/CursoRubenAdvanced/visionamos_test/app/models/concerns/searchable.rb": [
+      "/home/fido/Escritorio/CursoRubenAdvanced/visionamos_test sesion 4/app/models/concerns/searchable.rb": [
         1,
         1,
         1,
@@ -230,7 +246,7 @@
         null,
         null
       ],
-      "/home/fido/Escritorio/CursoRubenAdvanced/visionamos_test/app/models/empresa.rb": [
+      "/home/fido/Escritorio/CursoRubenAdvanced/visionamos_test sesion 4/app/models/empresa.rb": [
         1,
         1,
         1,
@@ -247,7 +263,7 @@
         null,
         null
       ],
-      "/home/fido/Escritorio/CursoRubenAdvanced/visionamos_test/app/models/concerns/exportable.rb": [
+      "/home/fido/Escritorio/CursoRubenAdvanced/visionamos_test sesion 4/app/models/concerns/exportable.rb": [
         1,
         1,
         1,
@@ -266,17 +282,26 @@
         null,
         null
       ],
-      "/home/fido/Escritorio/CursoRubenAdvanced/visionamos_test/app/models/departamento.rb": [
+      "/home/fido/Escritorio/CursoRubenAdvanced/visionamos_test sesion 4/app/models/departamento.rb": [
         1,
         1,
         null
       ],
-      "/home/fido/Escritorio/CursoRubenAdvanced/visionamos_test/app/models/ciudad.rb": [
+      "/home/fido/Escritorio/CursoRubenAdvanced/visionamos_test sesion 4/app/models/ciudad.rb": [
         1,
         1,
+        null
+      ],
+      "/home/fido/Escritorio/CursoRubenAdvanced/visionamos_test sesion 4/app/models/usuario.rb": [
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
         null
       ]
     },
-    "timestamp": 1411212431
+    "timestamp": 1411217986
   }
 }

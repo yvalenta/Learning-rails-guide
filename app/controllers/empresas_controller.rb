@@ -69,13 +69,13 @@ class EmpresasController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_empresa
-      @empresa = Empresa.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_empresa
+    @empresa = Empresa.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def empresa_params
-      params.require(:empresa).permit(:nombre, :ciudad_id, :departamento_id)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def empresa_params
+    params.require(:empresa).permit(:nombre, :ciudad_id, :departamento_id)
+  end
 end
