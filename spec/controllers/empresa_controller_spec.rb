@@ -169,17 +169,17 @@ describe EmpresasController do
 
       it 'Retorna un JSON con el listado de empresas' do
         get :index,  :format => :json
-        expect(response).to redirect_to new_sesion_path
+        expect(response).to require_login
       end
 
       it 'Retorna archivo CSV' do
         get :index, :format => :csv
-        expect(response).to redirect_to new_sesion_path
+        expect(response).to require_login
       end
 
       it 'render de la vista :index' do
         get :index
-        expect(response).to redirect_to new_sesion_path
+        expect(response).to require_login
       end
 
 
