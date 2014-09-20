@@ -9,7 +9,7 @@ class SesionesController < ApplicationController
     @usuario = Usuario.authenticate(params[:correo], params[:clave])
     if @usuario
       session[:usuario_id] = @usuario.id
-      flash[:notice] = "Bienvenido #{@usuario.nombre}!!"
+      flash[:notice] = "Bienvenido !!"
       redirect_to clientes_path
     else
       flash[:warning] = 'Los datos son erroneos!!'
