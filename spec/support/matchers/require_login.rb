@@ -3,11 +3,11 @@ RSpec::Matchers.define :require_login do
     redirect_to Rails.application.routes.url_helpers.new_sesion_path
   end
 
-  failure_message_for_should do |actual|
+  failure_message do |actual|
     "Se esperaba redireccion a inicio de sesion"
   end
 
-  failure_message_for_should_not do |actual|
+  failure_message_when_negated do |actual|
     "NO se esperaba redireccion a inicio de sesion"
   end
 
