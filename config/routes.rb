@@ -10,6 +10,8 @@ VisionamosMiniCoffe::Application.routes.draw do
 
   resources :clientes
 
+  resources :sesiones
+
   resources :ciudades
 
   resources :departamentos

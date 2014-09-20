@@ -7,6 +7,7 @@
 #   inflect.plural /^(ox)$/i, '\1en'
 #   inflect.singular /^(ox)en/i, '\1'
    inflect.irregular 'ciudad', 'ciudades'
+   inflect.irregular 'sesion', 'sesiones'
 #   inflect.uncountable %w( fish sheep )
  end
 

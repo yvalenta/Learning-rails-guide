@@ -13,6 +13,19 @@
 <%= link_to 'Departamentos', departamentos_path %>
 <%= link_to 'Clientes', clientes_path %>
 
+<% flash.each do |key, val|%>
+    <p><%= val %></p>
+<% end %>
+<br/>
+<% if @current_user %>
+  <%= @current_user.nombre %> -
+  <%= link_to 'Salir', sesion_path(1), method: :delete %>
+<% else %>
+  <%= link_to 'Ingresar', new_sesion_path %>
+<% end %>
+
+<%# @current_user.try(:nombre) %>
+
 <%= yield %>
 
 </body>
