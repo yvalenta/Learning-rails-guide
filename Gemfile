@@ -38,6 +38,9 @@ group :test do
   gem 'faker'
   gem 'database_cleaner'
   gem 'guard-rspec'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'selenium-webdriver'
   gem 'simplecov', require: false
 end
 
