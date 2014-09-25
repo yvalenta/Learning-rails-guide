@@ -11,11 +11,11 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: <%=ENV['OPENSHIFT_testingruby']%>
+  database: <%=ENV['OPENSHIFT_MYSQL']%>
   pool: 5
-  username: <%=ENV['OPENSHIFT_testingruby_DB_USERNAME']%>
-  password: <%=ENV['OPENSHIFT_testingruby_DB_PASSWORD']%>
-  socket: <%=ENV['OPENSHIFT_testingruby_DB_SOCKET']%>
+  username: <%=ENV['OPENSHIFT_MYSQL_DB_USERNAME']%>
+  password: <%=ENV['OPENSHIFT_MYSQL_DB_PASSWORD']%>
+  socket: <%=ENV['OPENSHIFT_MYSQL_DB_SOCKET']%>
   #host: <%=ENV['OPENSHIFT_testingruby_DB_HOST']%>
 
 # Warning: The database defined as "test" will be erased and
@@ -26,9 +26,9 @@ test:
   encoding: utf8
   database: <%=ENV['OPENSHIFT_testingruby']%>
   pool: 5
-  username: OPENSHIFT_testingruby_DB_USERNAME
-  password: OPENSHIFT_testingruby_DB_PASSWORD
-  socket: OPENSHIFT_testingruby_DB_SOCKET
+  username: <%=ENV['OPENSHIFT_MYSQL_DB_USERNAME']%>
+  password: <%=ENV['OPENSHIFT_MYSQL_DB_PASSWORD']%>
+  socket: <%=ENV['OPENSHIFT_MYSQL_DB_SOCKET']%>
   #host: OPENSHIFT_testingruby_DB_HOST
 
 production:
@@ -36,7 +36,7 @@ production:
   encoding: utf8
   database: <%=ENV['OPENSHIFT_testingruby']%>
   pool: 5
-  username: <%=ENV['OPENSHIFT_testingruby_DB_USERNAME']%>
-  password: <%=ENV['OPENSHIFT_testingruby_DB_PASSWORD']%>
-  socket: <%=ENV['OPENSHIFT_testingruby_DB_SOCKET']%>
+  username: <%=ENV['OPENSHIFT_MYSQL_DB_USERNAME']%>
+  password: <%=ENV['OPENSHIFT_MYSQL_DB_PASSWORD']%>
+  socket: <%=ENV['OPENSHIFT_MYSQL_DB_SOCKET']%>
   #host: <%=ENV['OPENSHIFT_testingruby_DB_HOST']%>
