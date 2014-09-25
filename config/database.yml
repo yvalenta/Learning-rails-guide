@@ -11,7 +11,7 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: <%=ENV['OPENSHIFT_MYSQL']%>
+  database: <%=ENV['OPENSHIFT_APP_NAME']%>
   pool: 5
   username: <%=ENV['OPENSHIFT_MYSQL_DB_USERNAME']%>
   password: <%=ENV['OPENSHIFT_MYSQL_DB_PASSWORD']%>
@@ -24,7 +24,7 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  database: <%=ENV['OPENSHIFT_testingruby']%>
+  database: <%=ENV['OPENSHIFT_APP_NAME']%>
   pool: 5
   username: <%=ENV['OPENSHIFT_MYSQL_DB_USERNAME']%>
   password: <%=ENV['OPENSHIFT_MYSQL_DB_PASSWORD']%>
@@ -34,7 +34,7 @@ test:
 production:
   adapter: mysql2
   encoding: utf8
-  database: <%=ENV['OPENSHIFT_testingruby']%>
+  database: <%=ENV['OPENSHIFT_APP_NAME']%>
   pool: 5
   username: <%=ENV['OPENSHIFT_MYSQL_DB_USERNAME']%>
   password: <%=ENV['OPENSHIFT_MYSQL_DB_PASSWORD']%>
