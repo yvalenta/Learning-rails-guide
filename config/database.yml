@@ -11,12 +11,12 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: testingruby
+  database: <%=ENV['OPENSHIFT_testingruby']%>
   pool: 5
-  username: OPENSHIFT_testingruby_DB_USERNAME
-  password: OPENSHIFT_testingruby_DB_PASSWORD
-  socket: OPENSHIFT_testingruby_DB_SOCKET
-  host: OPENSHIFT_testingruby_DB_HOST
+  username: <%=ENV['OPENSHIFT_testingruby_DB_USERNAME']%>
+  password: <%=ENV['OPENSHIFT_testingruby_DB_PASSWORD']%>
+  socket: <%=ENV['OPENSHIFT_testingruby_DB_SOCKET']%>
+  #host: <%=ENV['OPENSHIFT_testingruby_DB_HOST']%>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -24,19 +24,19 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  database: visionamos_mini_coffe_test
+  database: <%=ENV['OPENSHIFT_testingruby']%>
   pool: 5
   username: OPENSHIFT_testingruby_DB_USERNAME
   password: OPENSHIFT_testingruby_DB_PASSWORD
   socket: OPENSHIFT_testingruby_DB_SOCKET
-  host: OPENSHIFT_testingruby_DB_HOST
+  #host: OPENSHIFT_testingruby_DB_HOST
 
 production:
   adapter: mysql2
   encoding: utf8
-  database: testingruby
+  database: <%=ENV['OPENSHIFT_testingruby']%>
   pool: 5
-  username: OPENSHIFT_testingruby_DB_USERNAME
-  password: OPENSHIFT_testingruby_DB_PASSWORD
-  socket: OPENSHIFT_testingruby_DB_SOCKET
-  host: OPENSHIFT_testingruby_DB_HOST
+  username: <%=ENV['OPENSHIFT_testingruby_DB_USERNAME']%>
+  password: <%=ENV['OPENSHIFT_testingruby_DB_PASSWORD']%>
+  socket: <%=ENV['OPENSHIFT_testingruby_DB_SOCKET']%>
+  #host: <%=ENV['OPENSHIFT_testingruby_DB_HOST']%>
