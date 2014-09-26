@@ -1,5 +1,6 @@
-Ejemplo trazabilidad paso por paso:
+**Ejemplo trazabilidad paso por paso:**
+___
 
-Iniciacion con CoffeeScript
-Iniciacion con Rspec
-Iniciación RSpec, Factory Girl, SimpleCov, Capybara
+* Iniciacion con CoffeeScript
+*  Iniciacion con Rspec
+*    Iniciación RSpec, Factory Girl, SimpleCov, Capybara
