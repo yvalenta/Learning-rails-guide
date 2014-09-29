@@ -11,12 +11,13 @@
 development:
   adapter: postgresql
   encoding: utf8
-  database: visionamos_mini_coffe_development
+  database: ddcp4ulcq1mvgo
   pool: 5
-  username:
-  password:
+  username: cosxaekthutsfr
+  password: MN45cj6iBSIFZ8n-BKIz1bowMe
   #socket: <%=ENV['OPENSHIFT_MYSQL_DB_SOCKET']%>
-  #host: <%=ENV['OPENSHIFT_testingruby_DB_HOST']%>
+  host:   ec2-54-197-241-79.compute-1.amazonaws.com
+  port: 5432
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -24,19 +25,20 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  database: visionamos_mini_coffe_test
+  database: ddcp4ulcq1mvgo
   pool: 5
-  username:
-  password:
+  username: cosxaekthutsfr
+  password: MN45cj6iBSIFZ8n-BKIz1bowMe
   #socket: <%=ENV['OPENSHIFT_MYSQL_DB_SOCKET']%>
-  #host: OPENSHIFT_testingruby_DB_HOST
+  host: Oec2-54-197-241-79.compute-1.amazonaws.com
 
 production:
   adapter: mysql2
   encoding: utf8
-  database: visionamos_mini_coffe_production
+  database: ddcp4ulcq1mvgo
   pool: 5
-  username:
-  password:
+  username: cosxaekthutsfr
+  password: MN45cj6iBSIFZ8n-BKIz1bowMe
   #socket: <%=ENV['OPENSHIFT_MYSQL_DB_SOCKET']%>
-  #host: <%=ENV['OPENSHIFT_testingruby_DB_HOST']%>
+  host:  ec2-54-197-241-79.compute-1.amazonaws.com
+  port: 5432
