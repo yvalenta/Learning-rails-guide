@@ -1,3 +1,4 @@
+ruby '2.1.3'
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -55,3 +56,5 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+ge 'rails_12factor'
